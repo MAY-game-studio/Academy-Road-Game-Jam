@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14132e">
+  <meta name="description" content="负日者 SUNBEARER 2.0。收集星屑，推动太阳，点亮祭祀之塔。在线试玩，或下载 Windows 版。">
+  <meta property="og:title" content="负日者 SUNBEARER · 2.0">
+  <meta property="og:description" content="负起失落的太阳。在线试玩与 Windows 下载。">
+  <meta property="og:image" content="https://may-game-studio.github.io/Academy-Road-Game-Jam/assets/background.png">
+  <title>负日者 SUNBEARER · 2.0</title>
+  <link rel="icon" type="image/png" href="assets/scarab.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="负日者首页"><img src="assets/title.png" alt="负日者"><span>SUNBEARER</span></a>
+    <nav aria-label="主导航"><a href="#play">在线试玩</a><a href="#controls">操作指南</a><a class="nav-download" href="https://github.com/MAY-game-studio/Academy-Road-Game-Jam/releases/download/v2.0/Sunbearer_2.0_Windows.zip">下载 Windows 版</a></nav>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">MAY GAME STUDIO <span>VERSION 2.0</span></p><h1 id="page-title">负起失落的太阳<span>让光，再次流动。</span></h1></div>
+      <p class="intro-copy">化身圣甲虫，收集星屑、推动太阳球。<br>穿过绿洲、沙漠与冥境，点亮九座祭祀之塔，迎接最后的决战。</p>
+    </section>
+    <section id="play" class="play-section" aria-label="在线试玩负日者">
+      <div class="player-toolbar"><span>负日者 <b>2.0</b></span><div><button id="return-button" hidden>返回封面</button><button id="fullscreen-button" disabled>全屏试玩</button></div></div>
+      <div id="game-frame" class="game-frame">
+        <div id="cover" class="cover">
+          <div class="cover-content"><img class="cover-title" src="assets/title.png" alt="负日者 SUNBEARER"><p>把一颗太阳，打出无数种可能。</p><div class="cover-actions"><button id="play-button" class="button primary">在线试玩</button><a class="button secondary" href="https://github.com/MAY-game-studio/Academy-Road-Game-Jam/releases/download/v2.0/Sunbearer_2.0_Windows.zip">下载 Windows 版</a></div><p class="browser-note">建议使用电脑端 Chrome / Edge，支持键鼠与手柄。</p></div>
+        </div>
+        <canvas id="unity-canvas" width="1920" height="1080" tabindex="0" aria-label="负日者游戏画面" hidden></canvas>
+        <div id="loading" class="loading" hidden><div class="loading-sun" aria-hidden="true"></div><p id="loading-label" role="status" aria-live="polite">正在点亮太阳…</p><progress id="loading-progress" max="1" value="0" aria-label="游戏加载进度"></progress><p>首次加载需要下载游戏资源，请稍候。</p></div>
+      </div>
+      <div class="play-caption"><span id="player-status" role="status">点击「在线试玩」后开始加载游戏。</span><a href="#controls">查看操作方式</a></div>
+      <noscript><p class="noscript">在线试玩需要启用 JavaScript。你也可以直接下载 Windows 版。</p></noscript>
+    </section>
+    <section id="controls" class="controls-section" aria-labelledby="controls-title">
+      <div class="section-lead"><p class="eyebrow">HOW TO PLAY</p><h2 id="controls-title">同一颗太阳，<br>不同的解法。</h2><p>推球近战、格挡来袭、蓄力发射。<br>满级太阳球能够弹射，留下可以加速、跨岛的光之轨道。</p><img class="scarab" src="assets/scarab.png" alt="背负星辰的圣甲虫" loading="lazy"></div>
+      <div class="control-content">
+        <div class="input-tabs" role="tablist" aria-label="操作设备"><button id="keyboard-tab" role="tab" aria-selected="true" aria-controls="keyboard-panel">键鼠</button><button id="xbox-tab" role="tab" aria-selected="false" aria-controls="xbox-panel" tabindex="-1">Xbox 手柄</button><button id="switch-tab" role="tab" aria-selected="false" aria-controls="switch-panel" tabindex="-1">Switch Pro</button></div>
+        <div id="keyboard-panel" role="tabpanel" aria-labelledby="keyboard-tab"><dl class="control-list"><div><dt><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></dt><dd>移动 / 推球转向</dd></div><div><dt><kbd>空格</kbd> / 鼠标左键</dt><dd>按住推球，松开发射</dd></div><div><dt><kbd>Shift</kbd></dt><dd>按住加速，消耗星屑或球充能</dd></div><div><dt><kbd>Enter</kbd> / <kbd>Esc</kbd></dt><dd>确认 / 返回、暂停</dd></div></dl></div>
+        <div id="xbox-panel" role="tabpanel" aria-labelledby="xbox-tab" hidden><dl class="control-list"><div><dt>左摇杆</dt><dd>移动 / 推球转向</dd></div><div><dt><kbd>RT</kbd></dt><dd>按住推球，松开发射</dd></div><div><dt><kbd>LT</kbd></dt><dd>按住持续加速</dd></div><div><dt><kbd>A</kbd> / <kbd>B</kbd></dt><dd>确认 / 返回</dd></div></dl><p class="input-note">连接手柄后先按一次按键，让浏览器识别。菜单键可暂停。</p></div>
+        <div id="switch-panel" role="tabpanel" aria-labelledby="switch-tab" hidden><dl class="control-list"><div><dt>左摇杆</dt><dd>移动 / 推球转向</dd></div><div><dt><kbd>ZR</kbd></dt><dd>按住推球，松开发射</dd></div><div><dt><kbd>ZL</kbd></dt><dd>按住持续加速</dd></div><div><dt><kbd>A</kbd> / <kbd>B</kbd></dt><dd>确认 / 返回</dd></div></dl><p class="input-note">浏览器和驱动可能改变键位；如不一致，可在游戏主菜单的「手柄设置 / 校准」中调整。</p></div>
+        <div class="mechanic-note"><span class="sun-mark" aria-hidden="true">✦</span><p>半充能球可以弹射一次，满级球可以弹射三次。<br>每次弹射后，都能再次伤害之前命中过的敌人。</p></div>
+      </div>
+    </section>
+    <section class="download-section" aria-labelledby="download-title"><div><p class="eyebrow">TAKE THE SUN WITH YOU</p><h2 id="download-title">下载，随时点亮太阳。</h2><p>Windows 64 位 · 完整解压后运行 SunbearerRoadshow.exe</p></div><a class="button primary" href="https://github.com/MAY-game-studio/Academy-Road-Game-Jam/releases/download/v2.0/Sunbearer_2.0_Windows.zip">下载 2.0 Windows 版</a></section>
+  </main>
+  <footer><span>负日者 / SUNBEARER <b>2.0</b></span><a href="https://github.com/MAY-game-studio/Academy-Road-Game-Jam/releases/tag/v2.0" target="_blank" rel="noopener">版本说明与下载</a><span>MAY GAME STUDIO</span></footer>
+</body>
+</html>

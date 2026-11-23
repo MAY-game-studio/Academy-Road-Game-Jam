@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tag": "v2.0",
+  "repository": "MAY-game-studio/Academy-Road-Game-Jam",
+  "windows": {
+    "filename": "Sunbearer_2.0_Windows.zip",
+    "bytes": 75479996,
+    "sha256": "8bbf7942cdc5dcb8fb61aa0a382df57bf2423a652156d00a41b5b7e3f881664e",
+    "url": "https://github.com/MAY-game-studio/Academy-Road-Game-Jam/releases/download/v2.0/Sunbearer_2.0_Windows.zip"
+  },
+  "gameplay_baseline": "1.0.13",
+  "tests_run": false,
+  "game_launched": false
+}

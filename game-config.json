@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "loaderUrl": "play/Build/b23dd96997961653e2825455633aac82.loader.js",
+  "config": {
+    "dataUrl": "play/Build/92402d35df3449242ec361347b6bf2d8.data.unityweb",
+    "frameworkUrl": "play/Build/0a1d33594230c2f3b36e1d2407ab3b00.framework.js.unityweb",
+    "codeUrl": "play/Build/81791e24f558efacc67e5166b2982d41.wasm.unityweb",
+    "streamingAssetsUrl": "play/StreamingAssets",
+    "companyName": "MAY GAME STUDIO",
+    "productName": "Sunbearer",
+    "productVersion": "2.0.0"
+  }
+}
